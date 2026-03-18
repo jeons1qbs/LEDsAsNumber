@@ -1,16 +1,10 @@
-function showNumberLED (num: number) {
-    basic.clearScreen()
-    for (let index = 0; index <= num; index++) {
-        led.plot((index - 1) % 5, Math.floor(index - 1) / 5)
-    }
-}
 input.onButtonPressed(Button.A, function () {
     a += 1
-    showNumberLED(a)
+    CustomLEDs.showNumberLED(a)
 })
 input.onButtonPressed(Button.B, function () {
     b += 1
-    showNumberLED(b)
+    CustomLEDs.showNumberLED(b)
 })
 input.onGesture(Gesture.Shake, function () {
     basic.clearScreen()
